@@ -1,0 +1,33 @@
+name: Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_call:
+    inputs:
+      repository:
+        default: Retiblo/Retiblo_nextjs
+        required: false
+        type: string
+
+env:
+  NODE_VERSION: 18.19.0
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          repository: ${{ inputs.repository || github.repository }}
+          submodules: recursive
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: bun
+      - run: bun install
+      - run: bun run lint
+      - name: Ensure a clean working directory
+        run: git diff --name-status --exit-code
