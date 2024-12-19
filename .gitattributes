@@ -1,1 +1,1 @@
-*.lockb binary diff=lockb
+*.lockb -diff
