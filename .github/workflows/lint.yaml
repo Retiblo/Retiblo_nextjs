@@ -23,9 +23,9 @@ jobs:
         with:
           repository: ${{ inputs.repository || github.repository }}
           submodules: recursive
-      - uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          bun-version: latest
       - run: bun install
       - run: bun run lint
       - name: Ensure a clean working directory
