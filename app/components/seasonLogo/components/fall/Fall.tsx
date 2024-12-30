@@ -33,7 +33,7 @@ export default function Fall(props: FanProsp) {
           return (
             <Element
               key={index}
-              className={`absolute top-1/2 left-1/2 -translate-x-[40%] -translate-y-1/2 fan-${index} stroke-primary fill-none stroke-black stroke-[4px] [stroke-linejoin="round"]`}
+              className={`absolute top-1/2 left-1/2 -translate-x-[40%] -translate-y-1/2 fan-${index} stroke-primary fill-none stroke-black stroke-[4px] []`}
               style={{
                 opacity: indexHandler(index) == count % 2 ? 1 : 0,
               }}
