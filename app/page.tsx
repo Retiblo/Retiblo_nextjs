@@ -1,5 +1,7 @@
+import { Icon } from "@chakra-ui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { TiSocialGithub } from "react-icons/ti";
 
 import { SeasonLogo } from "./components/seasonLogo";
 
@@ -49,15 +51,9 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
+          <TiSocialGithub />
           <span className="group-hover:w-fit w-0 overflow-hidden transition-all text-nowrap">
-            Examples
+            Examples →
           </span>
         </a>
         <a
@@ -66,13 +62,7 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
+          <TiSocialGithub size={32} />
           <span className="group-hover:w-fit w-0 overflow-hidden transition-all text-nowrap">
             Github →
           </span>

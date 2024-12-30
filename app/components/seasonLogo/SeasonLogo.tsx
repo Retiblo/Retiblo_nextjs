@@ -9,10 +9,13 @@ const today = () => dayjs();
 export default function SeasonLogo() {
   return (
     <>
-      {today().month() < 2 || (today().month() === 11 && <Winter />)}
-      {today().month() < 5 && <Spring />}
-      {today().month() < 8 && <Summer />}
-      {today().month() < 11 && <Fall />}
+      {/* <Winter /> */}
+      <Summer />
+      {/* <Fall /> */}
+      {/* {today().month() < 2 || (today().month() === 11 && <Winter />)} */}
+      {/* {today().month() < 5 && <Spring />} */}
+      {/* {today().month() < 8 && <Summer />} */}
+      {/* {today().month() < 11 && <Fall />} */}
     </>
   );
 }

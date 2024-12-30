@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 
 import clsx from "clsx";
 
-import { Winds, Fans } from "./loadSvg";
+import { Fans, Winds } from ".";
 
 interface FanProsp {
   className?: string;
@@ -43,7 +43,7 @@ export default function Fan(props: FanProsp) {
                   opacity: indexHandler(index - val) == count ? 1 : 0,
                 }}
               >
-                <Element className="stroke-primary" />
+                <Element className="stroke-primary" color="#505050" />
               </div>
             ))}
           </div>
@@ -62,6 +62,7 @@ export default function Fan(props: FanProsp) {
               style={{
                 opacity: indexHandler(index) == count % 2 ? 1 : 0,
               }}
+              color="#505050"
             />
           );
         })}

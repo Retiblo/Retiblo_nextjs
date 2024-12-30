@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 
 import clsx from "clsx";
 
-import { Bees } from "./loadSvg";
+import { Bees } from ".";
 
 const indexHandler = (index: number) => (index + 4) % 4;
 
@@ -39,6 +39,7 @@ export default function Winter(props: FanProsp) {
               style={{
                 opacity: indexHandler(index) == count % 2 ? 1 : 0,
               }}
+              color="#505050"
             />
           );
         })}
