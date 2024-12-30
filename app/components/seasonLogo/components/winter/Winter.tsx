@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import clsx from "clsx";
 
-import { Snows, Snowmans } from "./loadSvg";
+import { Snowmans, Snows } from ".";
 
 const indexHandler = (index: number) => (index + 4) % 4;
 
@@ -35,12 +35,9 @@ export default function Winter(props: FanProsp) {
             className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
             style={{
               opacity: indexHandler(index) === count ? 1 : 0,
-              strokeWidth: 4,
-              strokeLinecap: "round",
-              stroke: "#505050",
             }}
           >
-            <Element className="stroke-primary" />
+            <Element className="stroke-primary" color="#505050" />
           </div>
         ))}
         {Snowmans.map((Element, index) => {
@@ -50,10 +47,8 @@ export default function Winter(props: FanProsp) {
               className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2`}
               style={{
                 opacity: indexHandler(index) == count % 2 ? 1 : 0,
-                strokeWidth: 4,
-                strokeLinecap: "round",
-                stroke: "#505050",
               }}
+              color="#505050"
             />
           );
         })}
